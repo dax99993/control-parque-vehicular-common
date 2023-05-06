@@ -1,0 +1,21 @@
+[package]
+name = "common"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+frontend = []
+backend = ["dep:sqlx"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version = "1.0.152", features = ["derive"] }
+uuid = { version = "1.2.2", features = ["v4", "serde"] }
+validator = { version = "0.16.0", features = ["derive"] }
+chrono = { version = "0.4.23", features = ["serde"] }
+secrecy = { version = "0.8.0", features = ["serde"] }
+#sqlx = { version = "0.6.2", features = ["chrono", "postgres", "uuid", "runtime-actix-rustls", "macros", "offline"] }
+sqlx = { version = "0.6.2", features = ["runtime-actix-rustls", "macros", "offline"], optional = true}
+strum = { version = "0.24.1", features = ["derive"] }
+strum_macros = "0.24.3"
