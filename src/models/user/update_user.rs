@@ -1,14 +1,17 @@
 use serde::{Serialize, Deserialize};
 use validator::Validate;
+use super::UsuarioRol;
 
 #[derive(Debug, Clone, PartialEq, Default, Deserialize, Serialize, Validate)]
-pub struct UpdateUser {
-    pub first_name: Option<String>,
-    pub last_name: Option<String>,
+pub struct ActualizaUsuario {
+    pub nombres: Option<String>,
+    pub apellidos: Option<String>,
     pub email: Option<String>,
-    pub employee_number: Option<i16>,
-    pub active: Option<bool>,
-    pub verified: Option<bool>,
-    pub department: Option<i32>,
-    pub role: Option<String>,
+    pub numero_empleado: Option<i16>,
+    pub activo: Option<bool>,
+    pub verificado: Option<bool>,
+    //pub departamento: Option<i32>,
+    pub departamento: Option<String>,
+    //pub rol: Option<String>,
+    pub rol: Option<UsuarioRol>,
 }

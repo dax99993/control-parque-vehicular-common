@@ -7,9 +7,10 @@ pub mod update_user_profile;
 
 pub mod password;
 
-pub use user::User;
-pub use update_user::UpdateUser;
+pub use user::{Usuario, UsuarioRol};
+pub use update_user::ActualizaUsuario;
+pub use update_user_me::ActualizaMiUsuario;
 
-pub use login_user::LoginUser;
-pub use signup_user::SignupUser;
-pub use password::ChangePasswordMe;
+pub use login_user::LoginUsuario;
+pub use signup_user::SignupUsuario;
+pub use password::{CambiarPassword, CambiarMiPassword};

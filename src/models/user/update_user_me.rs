@@ -12,3 +12,12 @@ pub struct UpdateUserMe {
     pub department: Option<Option<i32>>,
 }
 
+#[derive(Debug, Clone, PartialEq, Default, Deserialize, Serialize, Validate)]
+pub struct ActualizaMiUsuario {
+    pub nombres: Option<String>,
+    pub apellidos: Option<String>,
+    pub numero_empleado: Option<i16>,
+    pub departamento: Option<String>,
+    //pub departamento: Option<i32>,
+}
+
